@@ -10,7 +10,9 @@ export default function ToDo() {
     const dispatch = useDispatch()
     const [input, setInput] = useState('')
 
-    const renderItems = items.map((item, index) => <li key={index} onClick={() => dispatch(removeItem(index))}>{item}</li>)
+    const renderItems = items.map((item, index) =>
+        <li key={index} onClick={() => dispatch(removeItem(index))}>{item}</li>)
+
 
     const submitForm = (e) => {
         e.preventDefault()

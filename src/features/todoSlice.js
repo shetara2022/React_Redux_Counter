@@ -8,6 +8,7 @@ export const todoSlice = createSlice({
     name: 'todo',
     initialState,
     reducers: {
+
         addToDo: (state, action) => {
             return { items: [...state.items, action.payload] }
         },
@@ -20,7 +21,7 @@ export const todoSlice = createSlice({
             }
         },
         clearToDo: () => {
-            return { items: [] }
+            return initialState
         }
     }
 })
